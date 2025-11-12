@@ -1,4 +1,4 @@
-void var(unsigned char *p){
+char var(unsigned char *p){
     char signiture[100];
 
     if(p[0]==0xff&&p[1]==0xd8&&p[2]==0xff&&p[3]==0xe0||p[0]==0xff&&p[1]==0xd8&&p[2]==0xff&&p[3]==0xe8)strcpy(signiture, "JPEG");
@@ -17,4 +17,5 @@ void var(unsigned char *p){
     }
     
     if(p[0]==0x52&&p[1]==0x61&&p[2]==0x72&&p[3]==0x21&&p[4]==0x1a&&p[5]==0x07)strcpy(signiture, "rar");
+return signiture;
 }
